@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang = "en" >
+	<head>
+		<title>Politricks Poll</title>
+		<link rel="stylesheet" type="text/css" href="poll_css.css">
+	</head>
+	
+	<body>
+	
+	<h1 align = "center">Do You Know Your Party?</h1>
+	
+	<ol>
+		<li> Should every 18 year old citizen be required to provide at least one year of military service?</li>
+		
+		<div class = "radio" align="left"><br>
+			<input id = "11" type="radio" name="q1" value=1>Yes<br>
+			<input id = "12" type="radio" name="q1" value=-1>No<br>
+			<input id = "13" type="radio" name="q1" value=0>Undecided
+		</div><hr>
+	
+		<li> Do you support the legalization of marijuana?</li>
+		
+		<div class = "radio" align="left"><br>
+			<input id = "21" type="radio" name="q2" value=-1>Yes<br>
+			<input id = "22" type="radio" name="q2" value=1>No<br>
+			<input id = "23" type="radio" name="q2" value=0>Undecided
+		</div><hr>
+
+		<li> Do you support Common Core national standards?</li>
+		
+		<div class = "radio" align="left"><br>
+			<input id = "31" type="radio" name="q3" value=-1>Yes<br>
+			<input id = "32" type="radio" name="q3" value=1>No<br>
+			<input id = "33" type="radio" name="q3" value=0>Undecided
+		</div><hr>
+	
+		<li> Should immigrants be banned from entering until the government has improved screening for terrorist threats?</li>
+		
+		<div class = "radio" align="left"><br>
+			<input id = "41" type="radio" name="q4" value=1>Yes<br>
+			<input id = "42" type="radio" name="q4" value=-1>No<br>
+			<input id = "43" type="radio" name="q4" value=0>Undecided
+		</div><hr>
+	
+		<li> Should convicted felons have the right to vote?</li>
+	
+		<div class = "radio" align="left"><br>
+			<input id = "51" type="radio" name="q5" value=-1>Yes<br>
+			<input id = "52" type="radio" name="q5" value=1>No<br>
+			<input id = "53" type="radio" name="q5" value=0>Undecided
+		</div><hr>
+
+		<li>Should there be more restrictions on the process of purchasing a gun?</li>
+		
+		<div class = "radio" align="left"> <br>
+			<input id = "61" type="radio" name="q6" value=-1>Yes<br>
+			<input id = "62" type="radio" name="q6" value=1>No<br>
+			<input id = "63" type="radio" name="q6" value=0>Undecided<hr> 
+		</div>
+		
+		<li>Should the government decrease military spending?</li>
+		
+		<div class = "radio" align="left"> <br>
+			<input id = "71" type="radio" name="q7" value=-1>Yes<br>
+			<input id = "72" type="radio" name="q7" value=1>No<br>
+			<input id = "73" type="radio" name="q7" value=0>Undecided<hr> 
+		</div>
+		
+		<li>Should taxes for the rich be increased ?</li>
+		
+		<div class = "radio" align="left"><br>
+			<input id = "81" type="radio" name="q8" value=-1>Yes<br>
+			<input id = "82" type="radio" name="q8" value=1>No<br>
+			<input id = "83" type="radio" name="q8" value=0>Undecided<hr> 
+		</div>
+		
+		<li>Should LGBTQIA+ members have equal rights?</li>
+		
+		<div class = "radio" align="left"> <br>
+			<input id = "91" type="radio" name="q9" value=-1>Yes<br>
+			<input id = "92" type="radio" name="q9" value=1>No<br>
+			<input id = "93" type="radio" name="q9" value=0>Undecided<hr> 
+		</div>
+		
+		<li>Should abortion be legal?</li>
+		
+		<div class = "radio" align="left"> <br>
+			<input id = "101" type="radio" name="q10" value=-1>Yes<br>
+			<input id = "102" type="radio" name="q10" value=1>No<br>
+			<input id = "103" type="radio" name="q10" value=0>Undecided<hr> 
+		</div>		
+	</ol> 
+	
+	<button id = "btn" type = "button" onclick = calcAlign()>Submit</button>
+	<button id = "btn" type = "button" onclick = redirect()>Next</button>
+	
+	<script>
+
+	function calcAlign()
+	{
+	ans_list = ["11","12","13","21","22","23","31","32","33","41","42","43","51", "52" ,'53','61','62','63','71','72','73','81','82','83','91','92','93','101','102','103'];
+	ans_value = 0;
+	
+	for (index = 0; index < 30; index++) {
+		
+		//if (document.getElementById(ans_list[index]).checked) {
+			//ans_value += document.getElementById(ans_list[index]).value; 
+			//}
+			
+		if (document.getElementById(ans_list[index]).checked) 
+		{ if (document.getElementById(ans_list[index]).value == -1)
+			{ans_value--;}
+		  else if (document.getElementById(ans_list[index]).value == 1)
+			{ans_value++;}
+		}
+	}
+
+	if (ans_value == 0) 
+		{window.alert("You are most similar to an unaligned political party.");}
+	else if (ans_value > 0)
+		{window.alert("You are most similar to a Republican party member.");}
+	else if (ans_value < 0)
+		{window.alert("You are most similar to a Democratic party member.");}
+	}		
+	
+	function redirect() {
+		 window.location.assign("zoo.html");
+	}
+	
+	</script>
+	
+	</body>
+</html>
+
+
