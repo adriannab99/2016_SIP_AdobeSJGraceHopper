@@ -1,0 +1,31 @@
+<html>
+<head> 
+	<style>
+		img{
+			width: 300px;
+			height: auto;
+		}
+		#relative {
+			position: relative;
+			width: 10px;
+			height: 30px;
+			background-color: black;
+			left: 145px;
+			top: -100px;
+		}
+	</style>
+<body>
+	<script>
+	var1 = 145;
+	function myFunction(){
+		var1 += 5;
+		var2 = String(var1);
+		var3 = var2 + "px"
+		document.getElementById("relative").style.left = var3;
+	}
+	</script>
+	<img src = "poli.jpg" alt = "trial">
+	<div id = "relative"></div>
+	<button onclick = "myFunction()" id = "btn" type = "button">Click Me!</button>
+</body>
+</html>
