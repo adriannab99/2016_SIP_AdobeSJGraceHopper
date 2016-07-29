@@ -4,9 +4,13 @@
 	<head>
 		<title>Donkey</title>
 		<link rel="stylesheet" type="text/css" href="a_btn_css.css">
+		<link rel="stylesheet" type="text/css" href="slidercss.css">
+		<script type = "text/javascript" src = "onload.js"></script>
 	</head>
 	
-	<body>
+	<body onload = "onLoad()">
+	<img src = "poli.jpg">
+	<div style = "left:145px" id= "relativeSlider"></div>
 	<script>
 	
 	function redirect() {
@@ -16,7 +20,8 @@
 	</script>
 	<p>...Are you sure you aren't part of the shellfish exhibit?</p><br>
 	
-	<button id = "btn" type = "button" onclick= redirect()>Next</button>
-		
+	<button id = "btn" type = "button" onclick= "redirect()">Next</button>
+	
+	<script type = "text/javascript" src = "politrickstst.js"></script>		
 	</body>
 </html>
