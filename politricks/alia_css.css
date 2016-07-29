@@ -18,6 +18,14 @@ a:hover, a:active {
 	background-color: black;
 }
 
+a{
+	margin-right: 200px;
+}
+
+p{
+	margin-right:800px;
+}
+
 body {
 		background-image: url("alia.jpg");
 		background-repeat: no-repeat;
