@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = "en" >
+<html lang = "en">
 	<head>
 		<title>Politricks Poll</title>
 		<link rel="stylesheet" type="text/css" href="poll_css.css">
@@ -92,8 +92,7 @@
 		</div>		
 	</ol> 
 	
-	<button id = "btn" type = "button" onclick = calcAlign()>Submit</button>
-	<button id = "btn" type = "button" onclick = redirect()>Next</button>
+	<button id = "btn" type = "button" onclick = "calcAlign()">Next</button>
 	
 	<script>
 
@@ -117,16 +116,25 @@
 	}
 
 	if (ans_value == 0) 
-		{window.alert("You are most similar to an unaligned political party.");}
+		{var r = window.confirm("You are most similar to an unaligned political party.  Click OK to go to the text page.");
+		if (r == true) {
+			location.replace("zoo.html");}
+		else {
+			window.alert("Do you want to leave?");
+    }}
 	else if (ans_value > 0)
-		{window.alert("You are most similar to a Republican party member.");}
+		{var r = window.confirm("You are most similar to a Republican party member.  Click OK to go to the text page.");
+		if (r == true) {
+			location.replace("zoo.html");}
+		else {
+			window.alert("Do you want to leave?");}}
 	else if (ans_value < 0)
-		{window.alert("You are most similar to a Democratic party member.");}
-	}		
-	
-	function redirect() {
-		 window.location.assign("zoo.html");
-	}
+		{var r = window.confirm("You are most similar to a Democratic party member.  Click OK to go to the text page.");
+		if (r == true) {
+			location.replace("zoo.html");}
+		else {
+			window.alert("Do you want to leave?");}
+	}}		
 	
 	</script>
 	
