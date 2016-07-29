@@ -24,63 +24,16 @@
 <br>
 <h3>
 
-					<a href="file:///C:/Users/gwcp/Desktop/Text%20Adv%20Pages/IndPgHomeA.html">“You sound confused.”</a>
+					<a href="file:///C:/Users/gwcp/Desktop/Text%20Adv%20Pages/IndPg8.html">“You sound confused.”</a>
 					<div>
 					<br>
-					<a href="file:///C:/Users/gwcp/Desktop/Text%20Adv%20Pages/IndPgHomeBC.html">“I guess I can see where you’re coming from...”</a>
+					<a href="file:///C:/Users/gwcp/Desktop/Text%20Adv%20Pages/IndPg9.html">“I guess I can see where you’re coming from...”</a>
 					<div>
 					<br>
-					<a href="file:///C:/Users/gwcp/Desktop/Text%20Adv%20Pages/IndPgHomeBC.html">“Seriously. Just make up your mind.”</a>
+					<a href="file:///C:/Users/gwcp/Desktop/Text%20Adv%20Pages/IndPg8.html">“Seriously. Just make up your mind.”</a>
 
 </h3>
 
 </body>
-<script>
 
-function setCookie(c_name,value,exdays)
-{
-    var exdate=new Date();
-    exdate.setDate(exdate.getDate() + exdays);
-    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
-    document.cookie=c_name + "=" + c_value;
-}
-
-function getCookie(c_name)
-{
-    var i,x,y,ARRcookies=document.cookie.split(";");
-    for (i=0;i<ARRcookies.length;i++)
-    {
-      x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
-      y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
-      x=x.replace(/^\s+|\s+$/g,"");
-      if (x==c_name)
-        {
-        return unescape(y);
-        }
-      }
-}
-
-var song = document.getElementsByTagName('audio')[0];
-var played = false;
-var tillPlayed = getCookie('timePlayed');
-function update()
-{
-    if(!played){
-        if(tillPlayed){
-        song.currentTime = tillPlayed;
-        song.play();
-        played = true;
-        }
-        else {
-                song.play();
-                played = true;
-        }
-    }
-
-    else {
-    setCookie('timePlayed', song.currentTime);
-    }
-}
-setInterval(update,1000);
-</script>
 </html>
