@@ -4,15 +4,20 @@
 	<head>
 		<title>Donkey</title>
 		<link rel="stylesheet" type="text/css" href="a_btn_css.css">
+		<link rel="stylesheet" type="text/css" href="slidercss.css">
+		<script type = "text/javascript" src = "onload.js"></script>
 	</head>
 	
-	<body>
+	<body onload = "onLoad()">
+	<img src = "poli.jpg">
+	<div style = "left:145px" id= "relativeSlider"></div>
 	
 	<p>"Relax, you're fine. We're all fine when we work together, you know."</p><br>
 	
-	<a href ="dem3.html">I don't know about that. It's a lot easier to just focus on myself.</a><br>
+	<a href ="dem3.html" onclick = "Republican()">I don't know about that. It's a lot easier to just focus on myself.</a><br>
 	
-	<a href ="dem3.html">You're right! I wish everyone else could realize we need to help each other out.</a><br>
-		
+	<a href ="dem3.html" onclick = "Democrat()">You're right! I wish everyone else could realize we need to help each other out.</a><br>
+	
+	<script type = "text/javascript" src = "politrickstst.js"></script>
 	</body>
 </html>

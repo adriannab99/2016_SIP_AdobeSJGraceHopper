@@ -1,5 +1,5 @@
 function onLoad(){
-	var y = localStorage.getItem("x")
+	var y = sessionStorage.getItem("x")
 	document.getElementById("relativeSlider").style.left = y;
 	console.log(y);
 	}

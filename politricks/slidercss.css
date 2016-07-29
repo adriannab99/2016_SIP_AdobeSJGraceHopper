@@ -1,13 +1,13 @@
-		img{
-			width: 300px;
-			height: auto;
-		}
+img{
+	width: 300px;
+	height: auto;
+	}
 		
-		#relativeSlider {
-			position: relative;
-			width: 10px;
-			height: 30px;
-			background-color: black;
-			left: 145px;
-			top: -100px;
-		}
+#relativeSlider {
+	position: relative;
+	width: 10px;
+	height: 30px;
+	background-color: black;
+	left: 145px;
+	top: -100px;
+	}
