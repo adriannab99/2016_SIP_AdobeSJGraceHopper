@@ -21,7 +21,8 @@ a:hover, a:active {
 body {
 		background-image: url("alia.jpg");
 		background-repeat: no-repeat;
-		background-position: top right;
+		margin-right: 0px;
+		background-position: 20px 0px;
 		font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 		font-size: 14px;
 }
