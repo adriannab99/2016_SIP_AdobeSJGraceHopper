@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lans= "en">
+	<head>
+		<meta charset= "utf-8">
+		<meta name= "viewport" content="width=device-width, initial-scale=1">
+		
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+	<body style="background: transparent">
+	<link rel = "stylesheet" type = "text/css" href = "Worry.css">
+	<link rel = "stylesheet" type = "text/css" href = "JuniorButton.css">
+	</head>
+
+<h1>
+You decide to go to the Sloth exhibit. Once you arrive,an Independent Sloth comes to greet you. 
+</h1>
+<h2>
+“So… What do you think?”
+</h2>
+<br>
+<h3>
+
+					<a href="file:///C:/Users/gwcp/Desktop/Text%20Adv%20Pages/IndPgHomeA.html">“ Hold up. Did you just talk?! Like… in English?!”</a>
+					<div>
+					<br>
+					<a href="file:///C:/Users/gwcp/Desktop/Text%20Adv%20Pages/IndPgHomeBC.html">“What do you mean by that?”</a>
+					<div>
+					<br>
+					<a href="file:///C:/Users/gwcp/Desktop/Text%20Adv%20Pages/IndPgHomeBC.html">“You're talking about politics, aren’t you.”</a>
+
+</h3>
+<br>
+
+</body>
+
+<audio preload="auto" src="Independent.m4a" loop="true" autobuffer>
+Unsupported in Firefox
+</audio>
+
+<script>
+
+function setCookie(c_name,value,exdays)
+{
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+    document.cookie=c_name + "=" + c_value;
+}
+
+function getCookie(c_name)
+{
+    var i,x,y,ARRcookies=document.cookie.split(";");
+    for (i=0;i<ARRcookies.length;i++)
+    {
+      x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+      y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+      x=x.replace(/^\s+|\s+$/g,"");
+      if (x==c_name)
+        {
+        return unescape(y);
+        }
+      }
+}
+
+var song = document.getElementsByTagName('audio')[0];
+var played = false;
+var tillPlayed = getCookie('timePlayed');
+function update()
+{
+    if(!played){
+        if(tillPlayed){
+        song.currentTime = tillPlayed;
+        song.play();
+        played = true;
+        }
+        else {
+                song.play();
+                played = true;
+        }
+    }
+
+    else {
+    setCookie('timePlayed', song.currentTime);
+    }
+}
+setInterval(update,1000);
+</script>
+
+</html>
+
