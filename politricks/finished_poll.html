@@ -116,20 +116,32 @@
 	}
 
 	if (ans_value == 0) 
-		{var r = window.confirm("You are most similar to an unaligned political party.  Click OK to go to the text page.");
+		{var r = window.confirm("You are most similar to an unaligned political party.  Select OK to go to the next page.");
 		if (r == true) {
 			location.replace("zoo.html");}
 		else {
 			window.alert("Do you want to leave?");
     }}
-	else if (ans_value > 0)
-		{var r = window.confirm("You are most similar to a Republican party member.  Click OK to go to the text page.");
+	else if (ans_value > 6)
+		{var r = window.confirm("You are very similar to a Republican party member.  Select OK to go to the next page.");
 		if (r == true) {
 			location.replace("zoo.html");}
 		else {
 			window.alert("Do you want to leave?");}}
-	else if (ans_value < 0)
-		{var r = window.confirm("You are most similar to a Democratic party member.  Click OK to go to the text page.");
+	else if (ans_value > 0)
+		{var r = window.confirm("You are similar to a Republican party member.  Select OK to go to the next page.");
+		if (r == true) {
+			location.replace("zoo.html");}
+		else {
+			window.alert("Do you want to leave?");}}
+	else if (ans_value < 0 )
+		{var r = window.confirm("You are similar to a Democratic party member.  Select OK to go to the next page.");
+		if (r == true) {
+			location.replace("zoo.html");}
+		else {
+			window.alert("Do you want to leave?");}}
+	else if (ans_value < -6)
+		{var r = window.confirm("You are very similar to a Democratic party member.  Select OK to go to the next page.");
 		if (r == true) {
 			location.replace("zoo.html");}
 		else {
