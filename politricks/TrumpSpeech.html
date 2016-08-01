@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>Trump Quotes</title>
+		<link rel="stylesheet" type="text/css" href="poll_css.css">
+		<body style="background: FireBrick " onload = "onLoad()">
+	</head>
+	
+	<body>
+	
+	<h1 align = "center">Donald Trump Quotes</h1>
+	<h2 align = "center">You have 30 seconds to classify each quote!!! (Hit sumbit if you finish early)</h2>
+
+	<ol>
+		<li><font size="5">Among the victims is our late Ambassador, Chris Stevens. He was left helpless to die as Hillary Clinton soundly slept in her bed -- that's right, when the phone rang at
+3 o'clock in the morning, she was sleeping.</font></li>
+		
+		<div class = "radio" align="left"><br>
+			<input id = "11" type="radio" name="q1" value=1>Personal Attack<br>
+			<input id = "12" type="radio" name="q1" value=-1>Circular Reasoning<br>
+			<input id = "13" type="radio" name="q1" value=0>Neither
+		</div><hr>
+	
+		<li><font size="5">Hillary Clinton has also been the biggest promoter of the Trans-Pacific Partnership, which will ship millions more of our jobs overseas – and give up Congressional power to an international foreign commission.
+</font></li>
+		
+		<div class = "radio" align="left"><br>
+			<input id = "11" type="radio" name="q1" value=1>Personal Attack<br>
+			<input id = "12" type="radio" name="q1" value=-1>Circular Reasoning<br>
+			<input id = "13" type="radio" name="q1" value=0>Neither
+		</div><hr>
+
+		<li><font size="5">Hillary Clinton who, as most people know, is a world class liar –
+just look at her pathetic email and server statements, or her phony landing in Bosnia where she said she was under attack but the attack turned out to be young girls handing her flowers, a total self-serving lie.</font></li>
+		
+		<div class = "radio" align="left"><br>
+			<input id = "11" type="radio" name="q1" value=1>Personal Attack<br>
+			<input id = "12" type="radio" name="q1" value=-1>Circular Reasoning<br>
+			<input id = "13" type="radio" name="q1" value=0>Neither
+		</div><hr>
+	
+		<li><font size="5">The insiders wrote the rules of the game to keep themselves in power and in the money.
+That’s why we’re asking Bernie Sanders’ voters to join our movement: so together we can fix the system for ALL Americans. </font></li>
+		
+		<div class = "radio" align="left"><br>
+			<input id = "11" type="radio" name="q1" value=1>Personal Attack<br>
+			<input id = "12" type="radio" name="q1" value=-1>Circular Reasoning<br>
+			<input id = "13" type="radio" name="q1" value=0>Neither
+		</div><hr>
+	
+		<li><font size="5">Everywhere I look, I see the possibilities of what our country could be. But we can’t solve any of these problems by relying on the politicians who created them.We will never be able to fix a rigged system by counting on the same people who rigged it in the first place.</font></li>
+	
+		<div class = "radio" align="left"><br>
+			<input id = "11" type="radio" name="q1" value=1>Personal Attack<br>
+			<input id = "12" type="radio" name="q1" value=-1>Circular Reasoning<br>
+			<input id = "13" type="radio" name="q1" value=0>Neither
+		</div><hr>
+
+		<li><font size="5">The fact is, we can come back bigger and better and stronger than ever before --Jobs, jobs, jobs!</font></li>
+		
+		<div class = "radio" align="left"><br>
+			<input id = "11" type="radio" name="q1" value=1>Personal Attack<br>
+			<input id = "12" type="radio" name="q1" value=-1>Circular Reasoning<br>
+			<input id = "13" type="radio" name="q1" value=0>Neither
+		</div><hr>
+		
+		<li><font size="5">When I see the crumbling roads and bridges, or the dilapidated airports, or the factories moving overseas to Mexico, or to other countries, I know these problems can all be fixed, but not by Hillary Clinton – only by me.</font></li>
+		
+		<div class = "radio" align="left"><br>
+			<input id = "11" type="radio" name="q1" value=1>Personal Attack<br>
+			<input id = "12" type="radio" name="q1" value=-1>Circular Reasoning<br>
+			<input id = "13" type="radio" name="q1" value=0>Neither
+		</div><hr>
+		
+		<li><font size="5">I love what I do, and I am grateful beyond words to the nation that has allowed me to do it.
+So when people ask me why I am running, I quickly answer: I am running to give back to this country which has been so good to me.</font></li>
+		
+		<div class = "radio" align="left"><br>
+			<input id = "11" type="radio" name="q1" value=1>Personal Attack<br>
+			<input id = "12" type="radio" name="q1" value=-1>Circular Reasoning<br>
+			<input id = "13" type="radio" name="q1" value=0>Neither
+		</div><hr>
+			
+	</ol> 
+	
+	<button id = "btn" type = "button" onclick = "calcAlign()">Next</button>
+	
+	<script>
+
+	function calcAlign()
+	{
+	ans_list = ["11","12","13","21","22","23","31","32","33","41","42","43","51", "52" ,'53','61','62','63','71','72','73','81','82','83','91','92','93','101','102','103'];
+	ans_value = 0;
+	
+	for (index = 0; index < 30; index++) {
+		
+		//if (document.getElementById(ans_list[index]).checked) {
+			//ans_value += document.getElementById(ans_list[index]).value; 
+			//}
+			
+		if (document.getElementById(ans_list[index]).checked) 
+		{ if (document.getElementById(ans_list[index]).value == -1)
+			{ans_value--;}
+		  else if (document.getElementById(ans_list[index]).value == 1)
+			{ans_value++;}
+		}
+	}
+
+	if (ans_value == 0) 
+		{var r = window.confirm("You are most similar to an unaligned political party.  Select OK to go to the next page.");
+		if (r == true) {
+			location.replace("zoo.html");}
+		else {
+			window.alert("Do you want to leave?");
+    }}
+	else if (ans_value > 6)
+		{var r = window.confirm("You are very similar to a Republican party member.  Select OK to go to the next page.");
+		if (r == true) {
+			location.replace("zoo.html");}
+		else {
+			window.alert("Do you want to leave?");}}
+	else if (ans_value > 0)
+		{var r = window.confirm("You are similar to a Republican party member.  Select OK to go to the next page.");
+		if (r == true) {
+			location.replace("zoo.html");}
+		else {
+			window.alert("Do you want to leave?");}}
+	else if (ans_value < 0 )
+		{var r = window.confirm("You are similar to a Democratic party member.  Select OK to go to the next page.");
+		if (r == true) {
+			location.replace("zoo.html");}
+		else {
+			window.alert("Do you want to leave?");}}
+	else if (ans_value < -6)
+		{var r = window.confirm("You are very similar to a Democratic party member.  Select OK to go to the next page.");
+		if (r == true) {
+			location.replace("zoo.html");}
+		else {
+			window.alert("Do you want to leave?");}
+	}}		
+	
+	</script>
+
+	</body>
+</html>
