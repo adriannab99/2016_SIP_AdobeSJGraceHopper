@@ -7,7 +7,7 @@
 	p {text-align: center; font-size: 30px;}
 	#twitter {text-align: center;}
 	</style>
-	
+
 	</head>
 	
 	<body>
@@ -30,6 +30,19 @@
 		return t;
 	}(document, "script", "twitter-wjs"));
 	
+	var display = sessionStorage.getItem('x');
+	display = display.replace("px", "");
+	
+	if (display == 145)
+		{window.alert("You are similar to an unaligned party member.");}
+	else if (display > 185)
+		{window.alert("You are very similar to a Republican party member.");}
+	else if (display > 145)
+		{window.alert("You are similar to a Republican party member.");}
+	else if (display < 105)
+		{window.alert("You are very similar to a Democratic party member.");}
+	else 
+		
 	</script>
 	<p> Think you've learned enough basics about the parties?<br>
 	<a href ="https://www.usa.gov/election-office"  target="_blank"> Go vote! </a></p>

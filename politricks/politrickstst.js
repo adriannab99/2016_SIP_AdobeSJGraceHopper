@@ -1,4 +1,3 @@
-
 function Democrat(){
 		var elem = document.getElementById("relativeSlider");
 		var var1 = window.getComputedStyle(elem, null).getPropertyValue("left");
