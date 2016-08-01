@@ -17,8 +17,8 @@
 3 o'clock in the morning, she was sleeping.</font></li>
 		
 		<div class = "radio" align="left"><br>
-			<input id = "11" type="radio" name="q1" value=1>Personal Attack<br>
-			<input id = "12" type="radio" name="q1" value=-1>Circular Reasoning<br>
+			<input id = "11" type="radio" name="q1" value=0>Personal Attack<br>
+			<input id = "12" type="radio" name="q1" value=1>Circular Reasoning<br>
 			<input id = "13" type="radio" name="q1" value=0>Neither
 		</div><hr>
 	
@@ -27,7 +27,7 @@
 		
 		<div class = "radio" align="left"><br>
 			<input id = "21" type="radio" name="q2" value=1>Personal Attack<br>
-			<input id = "22" type="radio" name="q2" value=-1>Circular Reasoning<br>
+			<input id = "22" type="radio" name="q2" value=0>Circular Reasoning<br>
 			<input id = "23" type="radio" name="q2" value=0>Neither
 		</div><hr>
 
@@ -36,7 +36,7 @@ just look at her pathetic email and server statements, or her phony landing in B
 		
 		<div class = "radio" align="left"><br>
 			<input id = "31" type="radio" name="q3" value=1>Personal Attack<br>
-			<input id = "32" type="radio" name="q3" value=-1>Circular Reasoning<br>
+			<input id = "32" type="radio" name="q3" value=0>Circular Reasoning<br>
 			<input id = "33" type="radio" name="q3" value=0>Neither
 		</div><hr>
 	
@@ -44,32 +44,32 @@ just look at her pathetic email and server statements, or her phony landing in B
 That's why we’re asking Bernie Sanders' voters to join our movement: so together we can fix the system for ALL Americans. </font></li>
 		
 		<div class = "radio" align="left"><br>
-			<input id = "41" type="radio" name="q4" value=1>Personal Attack<br>
-			<input id = "42" type="radio" name="q4" value=-1>Circular Reasoning<br>
+			<input id = "41" type="radio" name="q4" value=0>Personal Attack<br>
+			<input id = "42" type="radio" name="q4" value=1>Circular Reasoning<br>
 			<input id = "43" type="radio" name="q4" value=0>Neither
 		</div><hr>
 	
 		<li><font size="5">Everywhere I look, I see the possibilities of what our country could be. But we can't solve any of these problems by relying on the politicians who created them.We will never be able to fix a rigged system by counting on the same people who rigged it in the first place.</font></li>
 	
 		<div class = "radio" align="left"><br>
-			<input id = "51" type="radio" name="q5" value=1>Personal Attack<br>
-			<input id = "52" type="radio" name="q5" value=-1>Circular Reasoning<br>
-			<input id = "53" type="radio" name="q5" value=0>Neither
+			<input id = "51" type="radio" name="q5" value=0>Personal Attack<br>
+			<input id = "52" type="radio" name="q5" value=0>Circular Reasoning<br>
+			<input id = "53" type="radio" name="q5" value=1>Neither
 		</div><hr>
 
 		<li><font size="5">The fact is, we can come back bigger and better and stronger than ever before --Jobs, jobs, jobs!</font></li>
 		
 		<div class = "radio" align="left"><br>
-			<input id = "61" type="radio" name="q6" value=1>Personal Attack<br>
-			<input id = "62" type="radio" name="q6" value=-1>Circular Reasoning<br>
-			<input id = "63" type="radio" name="q6" value=0>Neither
+			<input id = "61" type="radio" name="q6" value=0>Personal Attack<br>
+			<input id = "62" type="radio" name="q6" value=0>Circular Reasoning<br>
+			<input id = "63" type="radio" name="q6" value=1>Neither
 		</div><hr>
 		
 		<li><font size="5">When I see the crumbling roads and bridges, or the dilapidated airports, or the factories moving overseas to Mexico, or to other countries, I know these problems can all be fixed, but not by Hillary Clinton- only by me.</font></li>
 		
 		<div class = "radio" align="left"><br>
-			<input id = "71" type="radio" name="q7" value=1>Personal Attack<br>
-			<input id = "72" type="radio" name="q7" value=-1>Circular Reasoning<br>
+			<input id = "71" type="radio" name="q7" value=0>Personal Attack<br>
+			<input id = "72" type="radio" name="q7" value=1>Circular Reasoning<br>
 			<input id = "73" type="radio" name="q7" value=0>Neither
 		</div><hr>
 		
@@ -77,14 +77,15 @@ That's why we’re asking Bernie Sanders' voters to join our movement: so togeth
 So when people ask me why I am running, I quickly answer: I am running to give back to this country which has been so good to me.</font></li>
 		
 		<div class = "radio" align="left"><br>
-			<input id = "81" type="radio" name="q8" value=1>Personal Attack<br>
-			<input id = "82" type="radio" name="q8" value=-1>Circular Reasoning<br>
-			<input id = "83" type="radio" name="q8" value=0>Neither
+			<input id = "81" type="radio" name="q8" value=0>Personal Attack<br>
+			<input id = "82" type="radio" name="q8" value=0>Circular Reasoning<br>
+			<input id = "83" type="radio" name="q8" value=1>Neither
 		</div>
 			
 	</ol> 
 	
-	<button id = "btn" type = "button" onclick = "calcAlign()"><font size="5">SUBMIT</font></button>
+	<button id = "btn" type = "button" onclick = "calcAlign()"><font size="5">SUBMIT</font></button><br>
+	<a href="end_screen.html"><button><font size="5">QUIT</font></button></a>
 	
 	<script>
 
@@ -113,32 +114,56 @@ So when people ask me why I am running, I quickly answer: I am running to give b
 	}
 
 	if (ans_value == 0) 
-		{var r = window.confirm("You are most similar to an unaligned political party.  Select OK to go to the next page.");
+		{var r = window.confirm("Sorry bro. You got a 0. Select OK to go back to the main game.");
 		if (r == true) {
 			location.replace("end_screen.html");}
 		else {
 			window.alert("Do you want to leave?");
     }}
-	else if (ans_value > 6)
-		{var r = window.confirm("You are very similar to a Republican party member.  Select OK to go to the next page.");
+	else if (ans_value == 1)
+		{var r = window.confirm("You got an 1 out of 8. Select OK to go back to the main game.");
 		if (r == true) {
 			location.replace("end_screen.html");}
 		else {
 			window.alert("Do you want to leave?");}}
-	else if (ans_value > 0)
-		{var r = window.confirm("You are similar to a Republican party member.  Select OK to go to the next page.");
+	else if (ans_value == 2)
+		{var r = window.confirm("You got an 2 out of 8. Select OK to go back to the main game.");
 		if (r == true) {
 			location.replace("end_screen.html");}
 		else {
 			window.alert("Do you want to leave?");}}
-	else if (ans_value < 0 )
-		{var r = window.confirm("You are similar to a Democratic party member.  Select OK to go to the next page.");
+	else if (ans_value == 3 )
+		{var r = window.confirm("You got an 3 out of 8. Select OK to go back to the main game.");
 		if (r == true) {
 			location.replace("end_screen.html");}
 		else {
 			window.alert("Do you want to leave?");}}
-	else if (ans_value < -6)
-		{var r = window.confirm("You are very similar to a Democratic party member.  Select OK to go to the next page.");
+	else if (ans_value == 4 )
+		{var r = window.confirm("You got an 4 out of 8. Select OK to go back to the main game.");
+		if (r == true) {
+			location.replace("end_screen.html");}
+		else {
+			window.alert("Do you want to leave?");}}
+	else if (ans_value == 5 )
+		{var r = window.confirm("You got an 5 out of 8. Select OK to go back to the main game.");
+		if (r == true) {
+			location.replace("end_screen.html");}
+		else {
+			window.alert("Do you want to leave?");}}
+	else if (ans_value == 6 )
+		{var r = window.confirm("You got an 6 out of 8. Select OK to go back to the main game.");
+		if (r == true) {
+			location.replace("end_screen.html");}
+		else {
+			window.alert("Do you want to leave?");}}
+	else if (ans_value == 7 )
+		{var r = window.confirm("You got an 7 out of 8. Select OK to go back to the main game.");
+		if (r == true) {
+			location.replace("end_screen.html");}
+		else {
+			window.alert("Do you want to leave?");}}
+	else if (ans_value == 8)
+		{var r = window.confirm("You got an 8 out of 8 !!! CONGRATS!!! Select OK to go back to the main game.");
 		if (r == true) {
 			location.replace("end_screen.html");}
 		else {
