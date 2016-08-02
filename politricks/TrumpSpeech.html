@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
 	<head>
+		<meta http-equiv="refresh" content="30;url=end_screen.html"/>
 		<title>Trump Quotes</title>
 		<link rel="stylesheet" type="text/css" href="poll_css.css">
 		<body style="background: DarkSalmon ">
@@ -10,7 +11,7 @@
 	
 	
 	<h1 align = "center">Donald Trump Quotes</h1>
-	<h2 align = "center">You have 30 seconds to classify each quote!!! (Hit sumbit if you finish early)</h2>
+	<h2 align = "center">You have 30 seconds to classify each quote!!! (Hit sumbit if you finish early.)</h2>
 
 	<ol>
 		<li><font size="5">Among the victims is our late Ambassador, Chris Stevens. He was left helpless to die as Hillary Clinton soundly slept in her bed -- that's right, when the phone rang at
@@ -84,12 +85,18 @@ So when people ask me why I am running, I quickly answer: I am running to give b
 			
 	</ol> 
 	
-	<button id = "btn" type = "button" onclick = "calcAlign()"><font size="5">SUBMIT</font></button><br>
-	<a href="end_screen.html"><button><font size="5">QUIT</font></button></a>
+	<button onclick = "calcScore()">Submit</button><br>
+	
+	<button onclick = "redirect()">Quit</button></a>
 	
 	<script>
-
-	function calcAlign()
+	
+	function redirect()
+	{
+		window.location.assign("end_screen.html");
+	}
+	
+	function calcScore()
 	{
 	ans_list = ["11","12","13","21","22","23","31","32","33","41","42","43","51", "52" ,"53",'61','62','63','71','72','73','81','82','83'];
 	ans_value = 0;
@@ -163,7 +170,7 @@ So when people ask me why I am running, I quickly answer: I am running to give b
 		else {
 			window.alert("Do you want to leave?");}}
 	else if (ans_value == 8)
-		{var r = window.confirm("You got an 8 out of 8 !!! CONGRATS!!! Select OK to go back to the main game.");
+		{var r = window.confirm("You got an 8 out of 8!!! CONGRATS!!! Select OK to go back to the main game.");
 		if (r == true) {
 			location.replace("end_screen.html");}
 		else {
