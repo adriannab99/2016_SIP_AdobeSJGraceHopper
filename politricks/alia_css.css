@@ -24,6 +24,7 @@ a{
 
 p{
 	margin-right:800px;
+	font-size: 20px;
 }
 
 body {
@@ -32,5 +33,5 @@ body {
 		margin-right: 0px;
 		background-position: top right;
 		font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-		font-size: 14px;
+		font-size: 16px;
 }
