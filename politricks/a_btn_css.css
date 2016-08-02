@@ -18,10 +18,17 @@ a:hover, a:active {
 	background-color: black;
 }
 
+a{
+	margin-right: 200px;
+}
 body {
 		background-image: url("fml.jpg");
 		background-repeat: no-repeat;
 		background-position: top right;
 		font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 		font-size: 14px;
+}
+
+p {
+	margin-right: 800px;
 }

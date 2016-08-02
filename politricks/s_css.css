@@ -16,10 +16,16 @@
 .s:hover, .s:active {
 	background-color: black;
 }
-
+.s{
+	margin-right: 200px;
+}
 body {
 		background-image: url("fml.jpg");
 		background-repeat: no-repeat;
 		background-position: top right;
 		
+}
+
+p {
+	margin-right: 800px;
 }
